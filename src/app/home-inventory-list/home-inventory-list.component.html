@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="card my-2" *ngFor="let item of homeInventory">
+    <h4 class="card-header">{{item.name}}</h4>
+    <div class="card-body">
+      <h5 class="card-title">Location: {{item.location}}</h5>
+      <h5 class="card-title">Model: {{item.modelNumber}}</h5>
+      <h5 class="card-title">Serial Number: {{item.serialNumber}}</h5>
+      <h5 class="card-title">Amount Paid: {{item.amountPaid}}</h5>
+      <h5 class="card-title">Purchased Date: {{item.purchasedDate}}</h5>
+      <h5 class="card-title">Purchased From: {{item.purchasedFrom}}</h5>
+      <p class="card-text">{{item.description}}</p>
+
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              Files
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample" style="">
+            <div class="accordion-body">
+              <a>Manual</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <a [routerLink]="['/add']" class="btn btn-primary">Add Inventory Item</a>
+</div>

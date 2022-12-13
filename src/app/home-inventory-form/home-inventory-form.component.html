@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="p-5">
+    <form (ngSubmit)="onSubmit()">
+      <h3>Home Inventory Form</h3>
+      <input type="hidden" id="id" name="id">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" required name="name">
+      </div>
+      <div class="mb-3">
+        <label for="model-number" class="form-label">Model Number</label>
+        <input type="text" class="form-control" id="model-number" required name="model-number">
+      </div>
+      <div class="mb-3">
+        <label for="serial-number" class="form-label">Serial Number</label>
+        <input type="text" class="form-control" id="serial-number" required name="serial-number">
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <input type="area" class="form-control" id="description" required name="description">
+      </div>
+      <button class="btn btn-primary" type="submit">Save</button>
+    </form>
+  </div>
+</div>
