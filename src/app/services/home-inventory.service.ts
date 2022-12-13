@@ -19,12 +19,12 @@ export class HomeInventoryService {
     return this.http.get<{}[]>(`api/v1/home-inventory/${id}`);
   }
 
-  createHomeInventoryItem(recipe: any) {
-    return this.http.post(`api/v1/home-inventory`, recipe);
+  createHomeInventoryItem(inventoryItem: any) {
+    return this.http.post(`api/v1/home-inventory`, inventoryItem);
   }
 
-  updateHomeInventoryItem(id: any, recipe: any) {
-    return this.http.post(`api/v1/home-inventory/${id}`, recipe);
+  updateHomeInventoryItem(id: any, inventoryItem: any) {
+    return this.http.post(`api/v1/home-inventory/${id}`, inventoryItem);
   }
 
   deleteHomeInventoryItem(id: any) {
